@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+    <!-- Favicon-->
+    <title>SAVIBot</title>
+    <link rel="shortcut icon" href="../static/img/smart-car.png">
+  
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.3/jquery.mCustomScrollbar.min.css'>
+    <link rel="stylesheet" href="../static/src/font-awesome/css/all.min.css">
+  
+    <!-- Main CSS-->
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+
+<body>
+    <div class="title">
+        <h3>SAVIBot</h3>
+       <div>
+      <div id="chatbot" class="main-card collapsed">
+        <button id="chatbot_toggle">
+          <img src="../static/img/message.png" width="25" height="25">
+          <img src="../static/img/close.png" width="20" height="20">
+        </button>
+        <div class="main-title">
+          <div>
+            <svg viewBox="0 0 640 512" title="robot">
+              <path fill="currentColor" d="M32,224H64V416H32A31.96166,31.96166,0,0,1,0,384V256A31.96166,31.96166,0,0,1,32,224Zm512-48V448a64.06328,64.06328,0,0,1-64,64H160a64.06328,64.06328,0,0,1-64-64V176a79.974,79.974,0,0,1,80-80H288V32a32,32,0,0,1,64,0V96H464A79.974,79.974,0,0,1,544,176ZM264,256a40,40,0,1,0-40,40A39.997,39.997,0,0,0,264,256Zm-8,128H192v32h64Zm96,0H288v32h64ZM456,256a40,40,0,1,0-40,40A39.997,39.997,0,0,0,456,256Zm-8,128H384v32h64ZM640,256V384a31.96166,31.96166,0,0,1-32,32H576V224h32A31.96166,31.96166,0,0,1,640,256Z" />
+            </svg>
+          </div>
+          <span>SAVIBot</span>
+      
+        </div>
+        <main class="msger-chat" id="chat">
+          <div class="msg left-msg">
+            <div class="msg-img" style="background-image: url(../static/img/smart-car.png)" ></div>
+    
+            <div class="msg-bubble">
+              <div class="msg-info">
+                <div class="msg-info-name">SAVIBot</div>
+                <div class="msg-info-time"></div>
+              </div>
+              <div class="msg-text">
+                Halo! SAVI disini, Ada yang bisa SAVI bantu?
+              </div>
+            </div>
+          </div>
+        </main>
+        
+        <div class="line"></div>
+        <form class="input-div">
+
+          <input class="input-message" name="message" type="text" id="message" placeholder="Type your message ..." />
+          <button class="input-send" type="submit">
+            <svg style="width:24px;height:24px">
+              <path d="M2,21L23,12L2,3V10L17,12L2,14V21Z" />
+            </svg>
+          </button>
+        </form>
+    </div>
+    <!-- Scripts -->
+    <script src="../static/js/script.js"></script> 
+    <script src='../static/src/font-awesome/js/all.js'></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../static/src/bootstrap/js/bootstrap.min.js"></script>
+    
+
+</body>
+
+</html>

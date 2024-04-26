@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAVIcam</title>
+    <link rel="shortcut icon" href="../static/img/logosavi.png">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
+
+    <!-- Main CSS-->
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+
+<body id="savi" class="container-fluid">
+    
+    <div class="savi-title">
+        <div class="savi-line"></div>
+        <div class="savi-info-name" style="background-image: url(../static/img/savicam3.png)"></div>
+        <a class="line-atas">
+            <span></span>    
+        </a>
+        <div class="savi-new-line"></div>
+        <div id="flip">
+            <div><div>Teknik Elektro</div></div>
+            <div><div>FMIPA</div></div>
+            <div><div>Universitas Padjadjaran</div></div>
+        </div>
+        <div class="savi-new-line"></div>
+        <div class="row">
+            <div class="col-6 marjin d-flex justify-content-center">
+                <div class="video">
+                    <div class="booth">
+                        <img src="{{ url_for('video_feed') }}" class="corner">
+                    </div>
+                    <!--div class="isi"></div-->
+                </div>
+            </div>
+            <div class="col-6 marjin d-flex justify-content-center">
+                <!--table border = 1> 
+                    {% for key, value in result.items() %} 
+                       <tr> 
+                          <th> {{ key }} </th> 
+                          <td> {{ value }} </td> 
+                       </tr> 
+                    {% endfor %} 
+                </table--> 
+                <div class="info">
+                    
+                        <div>Informasi Pengguna</div>
+                        <div class="savi-line-info"></div>
+                        <div class="line"></div>
+                        <div class="savi-line-info"></div>
+                        
+                        <div class="row align-items-start">
+
+                        {% for key, value in result.items() %}
+                            <div class="col-3">
+                                <div class="nama">{{key}}</div>
+                            </div>
+                            <div class="col-9" id="nama">
+                                <div class="isi-nama">: {{value}}</div>
+                            </div>
+                        {% endfor %}
+                        </div>
+                        
+                        <!--div class="savi-line-info"></div>
+                        <div class="row align-items-start">
+                            <div class="col-3">
+                                <div class="npm">{{key}}</div>
+                            </div>
+                            <div class="col-9">
+                                <div class="isi-npm">{{value}}</div>
+                            </div>
+                        </div-->
+                    
+                </div>
+            </div>
+        </div>
+            
+    
+        <div class="row">
+            <div class="col-8 marjin d-flex justify-content-center">
+                <div class="savi-line"></div>
+            </div>
+    
+            <div class="col-4 marjin d-flex justify-content-center">
+                <div class="savi-line"></div>
+            </div>
+        </div>
+    
+        <div class="row marjin d-flex justify-content-center">
+            <!--div class="col-8 marjin d-flex justify-content-center"></div-->
+                <div class="camera-mode">Camera Mode:
+                    <div class="savi-line-info"></div>
+                    <div id="camera-buttons">
+                        <form method="post" action="{{ url_for('tasks') }}">
+                        <!--button href="#!" id="start" class="start-camera collapsed" onClick="start()">On</button>
+                        <button href="#!" id="stop" class="stop-camera collapsed" onClick="stop()">Off</button-->
+                        <button value="start" id="start" class="start-camera collapsed" name="action1">On</button>
+                        <button value="stop" id="stop" class="stop-camera collapsed" name="action2">Off</button>
+                        </form>
+                    </div>
+                </div>
+            
+    
+            <!---div class="col-4 marjin d-flex justify-content-center">
+                <button type="button" id="respon" onclick="loadDoc()">Gerakan Robot</button>
+            </div-->
+        </div>
+        
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+    
+
+    //$(document).ready(function(){
+    function loadDoc() {
+        var xhttp = new XMLHttpRequest();
+        //$("respon").click(function(){
+            $.get("/label", xhttp.onreadystatechange  = function(){
+                //if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("respon").innerHTML =
+                this.responseText;
+                //}
+            });
+        }
+    //});
+
+    /*$.ajax({
+        type: "GET",
+        url: "/camrespon",
+        data: JSON.stringify(server_data),
+        contentType: "application/json",
+        dataType: 'xml',
+        success: function(result) {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("respon").innerHTML =
+                this.responseText;
+            } 
+        } 
+        });*/
+
+    /*camRespons();
+
+    function appendMessage(text) {
+            const msgHTML = `
+            <div class="col-6 marjin d-flex justify-content-center">
+                <div class="respon">${text}</div>
+            </div>
+        `;
+        msgerChat.innerHTML=msgHTML
+            //msgerChat.insertAdjacentHTML("beforeend", msgHTML);
+            //msgerChat.scrollTop +=  500;
+        }
+
+    function camRespons() {
+        // Bot Response
+        $.post("/post").done(function (msg) {
+            //console.log(rawText);
+            console.log(msg);
+            const msgText = msg;
+            appendMessage(msgText);
+        });
+        }
+
+    function start() {
+
+    }
+
+    function stop() {
+
+    }*/
+    </script>
+</body>
+</html>

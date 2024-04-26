@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAVIcam Web</title>
+    <link rel="shortcut icon" href="../static/img/logosavi.png">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.3/jquery.mCustomScrollbar.min.css'>
+    <link rel="stylesheet" href="../static/src/font-awesome/css/all.min.css">
+  
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
+
+    <!-- Main CSS-->
+    <link rel="stylesheet" href="../static/css/styleweb.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""/>
+</head>
+
+<body id="savi" class="container-fluid">
+    <div class="savi-title">
+        <div class="savi-line"></div>
+        <!--div class="savi-info-name" style="background-image: url(../static/img/savicam3.png)"></div>
+        <a class="line-atas">
+            <span></span>    
+        </a>
+        <div class="savi-new-line"></div>
+        <div id="flip">
+            <div><div>Teknik Elektro</div></div>
+            <div><div>FMIPA</div></div>
+            <div><div>Universitas Padjadjaran</div></div>
+        </div-->
+        <div class="savi-new-line"></div>
+        <div class="row">
+            
+            <div class="col-4 marjin d-flex justify-content-center">
+                <!--table border = 1> 
+                    {% for key, value in result.items() %} 
+                       <tr> 
+                          <th> {{ key }} </th> 
+                          <td> {{ value }} </td> 
+                       </tr> 
+                    {% endfor %} 
+                </table--> 
+                <div class="info">
+                    
+                        <div>Informasi Pengguna</div>
+                        <div class="savi-line-info"></div>
+                        <div class="line"></div>
+                        <div class="savi-line-info"></div>
+                        
+                        <div class="row align-items-start">
+
+                        {% for key, value in result.items() %}
+                            <div class="col-3">
+                                <div class="nama">{{key}}</div>
+                            </div>
+                            <div class="col-9" id="nama">
+                                <div class="isi-nama">{{value}}</div>
+                            </div>
+                        {% endfor %}
+                        </div>
+                        
+                        <!--div class="savi-line-info"></div>
+                        <div class="row align-items-start">
+                            <div class="col-3">
+                                <div class="npm">{{key}}</div>
+                            </div>
+                            <div class="col-9">
+                                <div class="isi-npm">{{value}}</div>
+                            </div>
+                        </div-->
+                    
+                </div>
+            </div>
+
+            <div class="col-4 marjin d-flex justify-content-center">
+                <div class="video">
+                    <div class="booth">
+                        <img src="{{ url_for('video_feed') }}" class="corner">
+                    </div>
+                    <!--div class="isi"></div-->
+                </div>
+            </div>
+
+            <div class="col-4 marjin d-flex justify-content-center"></div>
+                
+
+        </div>
+
+    </div>
+
+    <div id="chatbot" class="main-card collapsed">
+        <button id="chatbot_toggle">
+          <div class="chat_text">
+            <h3>Chat</h3>
+            <img src="../static/img/message4-01.png" width="25" height="25">
+          </div>
+          <div class="chat_img">
+            <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 30 30" width="22px" height="22px" id="close">    
+            <path d="M 7 4 C 6.744125 4 6.4879687 4.0974687 6.2929688 4.2929688 L 4.2929688 
+            6.2929688 C 3.9019687 6.6839688 3.9019687 7.3170313 4.2929688 7.7070312 L 11.585938 
+            15 L 4.2929688 22.292969 C 3.9019687 22.683969 3.9019687 23.317031 4.2929688 23.707031 L 
+            6.2929688 25.707031 C 6.6839688 26.098031 7.3170313 26.098031 7.7070312 25.707031 L 15 
+            18.414062 L 22.292969 25.707031 C 22.682969 26.098031 23.317031 26.098031 23.707031 25.707031 
+            L 25.707031 23.707031 C 26.098031 23.316031 26.098031 22.682969 25.707031 22.292969 L 18.414062 
+            15 L 25.707031 7.7070312 C 26.098031 7.3170312 26.098031 6.6829688 25.707031 6.2929688 L 23.707031 
+            4.2929688 C 23.316031 3.9019687 22.682969 3.9019687 22.292969 4.2929688 L 15 11.585938 L 7.7070312 
+            4.2929688 C 7.5115312 4.0974687 7.255875 4 7 4 z"/></svg>
+          </div>  
+        </button>
+
+        <!-- Header Chatroom -->
+        <div class="main-title">
+          <div>
+            <img src="../static/img\Logo\Logo8.png" width="25" height="25">
+          </div>
+          <span>SAVIBot</span>
+        </div>
+
+        <!-- Message Chatroom -->
+        <main class="msger-chat" id="chat">
+          <div class="msg left-msg">
+            <div class="msg-img" style="background-image: url(../static/img/Logo/Logo2.png)"></div>
+            <div class="msg-bubble">
+              <div class="msg-info">
+                <div class="msg-info-name">SAVIBot</div>
+                <div class="msg-info-time"></div>
+              </div>
+              <div class="msg-text">
+                Halo! SAVI disini, Ada yang bisa SAVI bantu?
+              </div>
+              <!--<div id="map"></div>-->
+            </div>
+          </div>
+        </main>
+        
+        <div class="line"></div>
+        <!-- Form Input Message -->
+        <form class="input-div">
+          <input class="input-message" name="message" type="text" id="message" placeholder="Type your message ..." />
+          <button class="input-send" type="submit">
+            <svg style="width:24px;height:24px">
+              <path d="M2,21L23,12L2,3V10L17,12L2,14V21Z" />
+            </svg>
+          </button>
+          
+          <!-- Voice Interaction -->
+          <button id="voiceinput" onclick="voiceon()"><alt="">
+            <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 30 30" width="22px" height="22px" id="close2">    
+              <path d="M 7 4 C 6.744125 4 6.4879687 4.0974687 6.2929688 4.2929688 L 4.2929688 
+              6.2929688 C 3.9019687 6.6839688 3.9019687 7.3170313 4.2929688 7.7070312 L 11.585938 
+              15 L 4.2929688 22.292969 C 3.9019687 22.683969 3.9019687 23.317031 4.2929688 23.707031 L 
+              6.2929688 25.707031 C 6.6839688 26.098031 7.3170313 26.098031 7.7070312 25.707031 L 15 
+              18.414062 L 22.292969 25.707031 C 22.682969 26.098031 23.317031 26.098031 23.707031 25.707031 
+              L 25.707031 23.707031 C 26.098031 23.316031 26.098031 22.682969 25.707031 22.292969 L 18.414062 
+              15 L 25.707031 7.7070312 C 26.098031 7.3170312 26.098031 6.6829688 25.707031 6.2929688 L 23.707031 
+              4.2929688 C 23.316031 3.9019687 22.682969 3.9019687 22.292969 4.2929688 L 15 11.585938 L 7.7070312 
+              4.2929688 C 7.5115312 4.0974687 7.255875 4 7 4 z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="22px" height="22px" class="bi bi-mic-fill" viewBox="0 0 16 16" id="voicebutton">
+              <path d="M5 3a3 3 0 0 1 6 0v5a3 3 0 0 1-6 0V3z"/>
+              <path d="M3.5 6.5A.5.5 0 0 1 4 7v1a4 4 0 0 0 8 0V7a.5.5 0 0 1 1 0v1a5 5 0 0 1-4.5 4.975V15h3a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1h3v-2.025A5 5 0 0 1 3 8V7a.5.5 0 0 1 .5-.5z"/>
+            </svg>
+          </button>
+        </form>
+
+        <!-- Voice Mode -->
+        <div id="voicemode" class="modevoice">
+          <span class="tekan"> Tekan untuk merekam suara</span>
+          <button id="voicetekan" class="voice_tekan">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" class="bi bi-mic-fill" viewBox="0 0 16 16" id="voice_1">
+              <path d="M5 3a3 3 0 0 1 6 0v5a3 3 0 0 1-6 0V3z"/>
+              <path d="M3.5 6.5A.5.5 0 0 1 4 7v1a4 4 0 0 0 8 0V7a.5.5 0 0 1 1 0v1a5 5 0 0 1-4.5 4.975V15h3a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1h3v-2.025A5 5 0 0 1 3 8V7a.5.5 0 0 1 .5-.5z"/>
+            </svg>
+            <div id ="pulse_2" class="pulse-ring_2"></div>
+            <!--<img id="micc_2" src="../static/img/micoff.png" class="mic_2" alt="">-->
+          </button>
+          
+        </div>
+      </div>
+
+        
+    
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""></script>
+    
+    <script src='../static/src/font-awesome/js/all.js'></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../static/src/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
+    <script src="../static/js/script.js"></script>
+</body>
+</html>

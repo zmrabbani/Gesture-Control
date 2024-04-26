@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAVIcam</title>
+    <link rel="shortcut icon" href="../static/img/logosavi.png">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
+
+    <!-- Main CSS-->
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+
+<body id="savi" class="container-fluid">
+    
+    <div class="savi-title">
+        <div class="savi-line"></div>
+        <div class="savi-info-name">SAVICAM</div>
+        <div class="line-atas"></div>
+        <div class="savi-line"></div>
+        <div class="row">
+            <div class="col-6 marjin d-flex justify-content-center">
+                <div class="video">
+                    <div class="booth">
+                        <img src="{{ url_for('video_feed') }}" class="corner">
+                    </div>
+                    <!--div class="isi"></div></p-->
+                </div>
+            </div>
+            <div class="col-6 marjin d-flex justify-content-center">
+                <div class="info">
+                    <div>Informasi Pengguna</div>
+                    <div class="savi-line-info"></div>
+                    <div class="line"></div>
+                    <div class="savi-line-info"></div>
+                    <div class="row align-items-start">
+                        <div class="col-2">
+                            <div class="nama">Nama:</div>
+                        </div>
+                        <div class="col-10">
+                            <div class="isi-nama">tes</div>
+                        </div>
+                    </div>
+                    <div class="savi-line-info"></div>
+                    <div class="row align-items-start">
+                        <div class="col-2">
+                            <div class="npm">NPM:</div>
+                        </div>
+                        <div class="col-10">
+                            <div class="isi-npm">tes</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="row">
+            <div class="col-6 marjin d-flex justify-content-center">
+                <div class="savi-line"></div>
+            </div>
+    
+            <div class="col-6 marjin d-flex justify-content-center">
+                <div class="savi-line"></div>
+            </div>
+        </div>
+    
+        <div class="row">
+            <div class="col-6 marjin d-flex justify-content-center">
+                <div class="camera-mode">Camera Mode:
+                    <div class="savi-line-info"></div>
+                    <div id="camera-buttons">
+                        <form method="post" action="{{ url_for('tasks') }}">
+                        <!--button href="#!" id="start" class="start-camera collapsed" onClick="start()">On</button>
+                        <button href="#!" id="stop" class="stop-camera collapsed" onClick="stop()">Off</button-->
+                        <button value="start" id="start" class="start-camera collapsed" name="action1">On</button>
+                        <button value="stop" id="stop" class="stop-camera collapsed" name="action2">Off</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="col-6 marjin d-flex justify-content-center">
+                <button type="button" id="respon" onclick="loadDoc()">Gerakan Robot</button>
+            </div>
+        </div>
+        
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+    /*function calculateQTc() {
+    var prolonged;
+    var resultsContainer = document.getElementById("respon");
+    }
+
+    resultsContainer.style.display = "block";
+
+    var server_data = [
+        {"QTc": formatedQTc},
+        {"prolonged": prolonged},
+        {"HR": heartRate},
+        {"QT": qtInt},
+        {"Sex": selectedSex}
+        ];*/
+
+    /*function loadDoc() {
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+            myFunction(this);
+            }
+        };
+        xhttp.open("GET", "label.xml", true);
+        xhttp.send();
+        }
+        
+    function myFunction(xml) {
+        //var i;
+        var xmlDoc = xml.responseXML;
+        //var table="<tr><th>Artist</th><th>Title</th></tr>";
+        var x = xmlDoc.getElementsByTagName("label");
+        /*for (i = 0; i <x.length; i++) { 
+            table += "<tr><td>" +
+            x[i].getElementsByTagName("ARTIST")[0].childNodes[0].nodeValue +
+            "</td><td>" +
+            x[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue +
+            "</td></tr>";
+        }
+        document.getElementById("respon").innerHTML = x;
+    }*/
+    
+    /*function loadDoc() {
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("respon").innerHTML =
+                this.responseText;
+            }
+        };
+        xhttp.open("GET", "label.xml", true);
+        xhttp.send();
+    }*/
+
+    //$(document).ready(function(){
+    function loadDoc() {
+        var xhttp = new XMLHttpRequest();
+        //$("respon").click(function(){
+            $.get("/label", xhttp.onreadystatechange  = function(){
+                //if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("respon").innerHTML =
+                this.responseText;
+                //}
+            });
+        }
+    //});
+
+    /*$.ajax({
+        type: "GET",
+        url: "/camrespon",
+        data: JSON.stringify(server_data),
+        contentType: "application/json",
+        dataType: 'xml',
+        success: function(result) {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("respon").innerHTML =
+                this.responseText;
+            } 
+        } 
+        });*/
+
+    /*camRespons();
+
+    function appendMessage(text) {
+            const msgHTML = `
+            <div class="col-6 marjin d-flex justify-content-center">
+                <div class="respon">${text}</div>
+            </div>
+        `;
+        msgerChat.innerHTML=msgHTML
+            //msgerChat.insertAdjacentHTML("beforeend", msgHTML);
+            //msgerChat.scrollTop +=  500;
+        }
+
+    function camRespons() {
+        // Bot Response
+        $.post("/post").done(function (msg) {
+            //console.log(rawText);
+            console.log(msg);
+            const msgText = msg;
+            appendMessage(msgText);
+        });
+        }
+
+    function start() {
+
+    }
+
+    function stop() {
+
+    }*/
+    </script>
+</body>
+</html>

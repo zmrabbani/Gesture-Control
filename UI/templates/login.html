@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="shortcut icon" href="../static/img/logosavi.png">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
+
+    <!-- Main CSS-->
+    <link rel="stylesheet" href="../static/css/style_login.css">
+</head>
+
+<body>
+    <div class="login-box">
+      <div class="logo-savi" style="background-image: url(../static/img/logosavi.png)"></div>
+        <h2>Login</h2>
+        <h3>Masukan Nama sebagai Username dan NPM sebagai Password</h3>
+        <form id="login-form" action="/UI" method="POST">
+          <div class="user-box">
+            <input type="text" name="Nama" required="" id="username-field" class="login-form-field">
+            <label>Username</label>
+          </div>
+          <div class="user-box">
+            <input type="password" name="NPM" required="" id="password-field" class="login-form-field">
+            <label>Password</label>
+          </div>
+          <div id="login-error-msg-holder">
+            <p id="login-error-msg">Invalid username <span id="error-msg-second-line">and/or password</span></p>
+          </div>
+          <input type="submit" value="Log In" id="login-form-submit" onclick="myFunction()">
+
+        </form>
+      </div>
+
+      <script>
+        
+        const loginForm = document.getElementById("login-form");
+        const loginButton = document.getElementById("login-form-submit");
+        const loginErrorMsg = document.getElementById("login-error-msg");
+
+        //loginButton.addEventListener("click", (e) => {
+            //e.preventDefault();
+          function myFunction() {
+            const username = loginForm.Nama.value;
+            const password = loginForm.NPM.value;
+
+            if (username === "savi" && password === "unpad") {
+                //alert("You have successfully logged in.");
+                document.getElementById("login-form").action = "/UI";
+                //document.getElementById("login-form").action = "/request";
+            }
+            else if (username === "zaki" && password === "123") {
+                //alert("You have successfully logged in.");
+                document.getElementById("login-form").action = "/UI";
+                //document.getElementById("login-form").action = "/request";
+            }  
+            else {
+                loginErrorMsg.style.opacity = 1;
+            }
+          }
+        //})
+      </script>
+</body>
+</html>

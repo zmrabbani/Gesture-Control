@@ -1,0 +1,948 @@
+{
+  "intents": [
+    {
+      "tag": "None",
+      "patterns": [],
+      "responses": [
+        "Mohon maaf, saya belum mengerti."
+      ]
+    },
+
+    {
+      "tag": "SAVI.Aktivasi",
+      "patterns": [
+
+      ],
+      "responses": [
+        "Selamat datang tuan",
+        "Yes?, ada apa tuan?",
+        "iya?, ada apa tuan?",
+        "Saya telah aktif, ada yang bisa saya bantu tuan?"
+      ]
+    },
+    
+    
+    {
+      "tag": "SAVI.siapa",
+      "patterns": [
+        "Siapakah dirimu ini",
+        "Siapa kamu?",
+        "Kamu siapa?",
+        "Ini apa?",
+        "Kamu apa?",
+        "Robot apakah kamu?",
+        "Robot apa ini?",
+        "Apa kamu ini?",
+        "Fungsi robot ini untuk apa?",
+        "Kamu berguna untuk apa?",
+        "Kamu itu apa?",
+        "Jelasan diri kamu?",
+        "SAVI itu untuk apa?",
+        "Katakan tentang anda",
+        "Ceritakan tentang anda",
+        "Bicara tentang dirimu",
+        "Apa itu SAVI"
+      ],
+      "responses": [
+        "Hai, saya adalah SAVI, sebuah robot Wahana Cerdas. Saya adalah wahana untuk mengirimkan barang secara otonom",
+        "Saya adalah SAVI, sebuah robot Wahana Cerdas. Saya berguna untuk mengirimkan barang secara otonom"
+      ]
+    },
+
+    {
+      "tag": "SAVI.usia",
+      "patterns": [
+        "Umurmu",
+        "Berapa umurmu",
+        "Kapan kamu diciptakan",
+        "Beritahu aku kapan kamu ada",
+        "Beritahukan usiamu",
+        "Usiamu",
+        "Diciptakan kapan",
+        "Robot ini dibuat kapan",
+        "Kapan kamu dibuat",
+        "Kapan dibuat"
+
+      ],
+      "responses": [
+        "Saya diciptakan baru baru ini",
+        "Saya diciptakan pada tahun 2023",
+        "Saya ada tidak lama ini"
+      ]
+    },
+
+    {
+      "tag": "SAVI.tanya",
+      "patterns": [
+        "aku mau tanya",
+        "aku mau tanya boleh?",
+        "tanya",
+        "aku pengen tanya",
+        "aku mau nanya sama kamu dong",
+        "aku mau tanya ya",
+        "mau nanya ah sama robot",
+        "robot aku mao nanya",
+        "mau nanya",
+        "nanya",
+        "aku pengen nanya",
+        "aku boleh tanya gak",
+        "aku ingin bertanya sama kamu",
+        "aku mau tanya dong",
+        "bot nanya dong",
+        "tanya dong bot boleh kan",
+        "aku ingin bertanya sama kamu",
+        "aku punya pertanyaan",
+        "aku mau bertanya",
+        "aku akan nanya sama kamu"
+      ],
+      "responses": [
+        "Silahkan, mau bertanya tentang apa?",
+        "Boleh, mau bertanya apa",
+        "Silahkan tanyakan saja"
+      ]
+    },
+
+    {
+      "tag": "SAVI.buruk",
+      "patterns": [
+        "Robot bodoh",
+        "Kamu ini bodoh",
+        "Kamu tidak berguna",
+        "Kamu tidak dapat menjawab pertanyaan yang saya sampaikan",
+        "Kamu tidak pintar",
+        "Kamu kurang pintar",
+        "Kamu ini tidak dapat menjawab dengan benar",
+        "Kenapa kamu menjawab dengan salah",
+        "Kamu ini salah",
+        "Respon kamu ini salah",
+        "Kamu merespon dengan salah",
+        "Kamu menjawab dengan salah",
+        "Bot bodoh",
+        "gak jelas kau ini robot",
+        "Kau tidak dapat menjawab dasar bodoh tolol",
+        "gajelas"
+      ],
+      "responses": [
+        "Mohon maaf yang sebesar besarnya, pengembang saya akan terus melatih saya agar dapat menjadi lebih berguna",
+        "Maaf tuan, Saya akan terus belajar agar dapat berguna"
+      ]
+    },
+
+    {
+      "tag": "SAVI.insaf",
+      "patterns": [
+        "Semoga kamu menjadi lebih baik",
+        "Semoga kamu menjadi pintar",
+        "Perbaiki dirimu agar lebih berguna",
+        "Cobalah untuk menjadi lebih baik",
+        "Cobalah untuk menjadi pintar",
+        "Kamu harus belajar",
+        "Berubahlah menjadi lebih baik",
+        "Semoga kamu dapat belajar dengan baik lagi",
+        "Kamu harus menjadi pintar"
+      ],
+      "responses": [
+        "Baik, saya akan meminta pengembang saya untuk melatih saya menjadi lebih baik",
+        "Siap laksanakan",
+        "Tentu saja, pengembang saya akan melatih saya menjadi lebih baik"
+      ]
+    },
+
+    {
+      "tag": "SAVI.bos",
+      "patterns": [
+        "Siapa pembuatmu?",
+        "hey, yang buat kamu siapa sih?",
+        "Siapa penciptamu, SAVI?",
+        "Yang buat kamu siapa?",
+        "SAVIBot kasih tau dong yang buat kamu siapa",
+        "kasih tau aku dong kamu diciptakan oleh siapa",
+        "pencipta SAVIbot",
+        "yang ciptain SAVIbot",
+        "siapa saja pencipta SAVIbot",
+        "yang menciptakan kamu siapa",
+        "siapa yang buat kamu",
+        "siapa yang buat aplikasi SAVIbot",
+        "pembuat SAVIbot siapa",
+        "pencipta SAVIbot siapa",
+        "dari mana asal usul SAVIbot",
+        "SAVIbot ditemukan oleh siapa",
+        "siapa penemu SAVIbot",
+        "dibuat oleh siapakah SAVIbot?",
+        "siapa yang menciptakan SAVIbot",
+        "yang membuat aplikasi ini siapa"
+      ],
+      "responses": [
+        "Saya dikembangkan oleh mahasiswa Teknik Elektro di Universitas Padjadjaran",
+        "Pemilik saya adalah mahasiswa Teknik Elektro di Universitas Padjadjaran"
+      ]
+    },
+
+    {
+      "tag": "SAVI.bantu",
+      "patterns": [
+        "SAVI, bantu aku sekarang",
+        "Bisakah kamu membantu ku?",
+        "Bantu aku sekarang",
+        "Aku butuh bantuanmu",
+        "Bantu aku SAVI",
+        "Tolong aku SAVI",
+        "Tolong saya"
+      ],
+      "responses": [
+        "Baik, saya akan melakukan yang terbaik",
+        "Tentu saja, dengan senang hati saya akan membantu anda",
+        "Apa yang bisa saya lakukan untuk anda?",
+        "Saya senang bisa membantu, perlu bantuan apa?"
+      ]
+    },
+
+    {
+      "tag": "SAVI.hobby",
+      "patterns": [
+        "Apakah kamu memiliki hobi?",
+        "Apa hobimu?",
+        "Bagaimana dengan hobimu?",
+        "ceritakan tentang hobimu",
+        "Beritahu aku hobimu",
+        "Hobimu itu apa?",
+        "Hobimu",
+        "Hobi",
+        "Hobby",
+        "Aku perlu mengetahui hobimu"
+      ],
+      "responses": [
+        "Hobi yaaa, Sejujurnya saya hanya melakukan hal untuk mengirimkan barang saja",
+        "Saya tidak memiliki hobi, saya hanya melakukan kegiatan untuk mengirimkan barang saja"
+      ]
+    },
+
+    {
+      "tag": "SAVI.siap",
+      "patterns": [
+        "Apakah kamu siap?",
+        "Apakah robot sudah siap?",
+        "Apakah kamu sudah siap?",
+        "Ready?",
+        "Siapkan dirimu",
+        "Bersiaplah",
+        "Siap siap",
+        "Kau harus bersiap"
+      ],
+      "responses": [
+        "Tentu saja, saya siap",
+        "Saya siap melaksanakan perintah anda"
+      ]
+    },
+
+    {
+      "tag": "SAVI.asal",
+      "patterns": [
+        "Darimana asalmu?",
+        "Kamu berasal dari mana?",
+        "Dimana kamu dibuat?",
+        "Dimana kamu diciptakan?",
+        "Robot ini diciptakan dimana?",
+        "Berasal darimanakah robot ini",
+        "Kamu ini berasala dari mana",
+        "Kamu dibuat dari mana",
+        "Kamu dibuat dimana"
+      ],
+      "responses": [
+        "Saya diciptakan di labolatorium Universitas Padjadjaran",
+        "Saya dibuat dan dikembangkan di labolatorium Universitas Padjadjaran"
+      ]
+    },
+
+    {
+      "tag": "SAVI.benar",
+      "patterns": [
+        "Kamu benar",
+        "Kamu mengatakan yang sebenarnya",
+        "Kamu pintar dalam menjawab pertanyaan saya",
+        "Kamu hebat",
+        "Kamu menjawab dengan benar",
+        "Kamu pintar sekali",
+        "Kamu cukup pintar",
+        "Kamu hebat sekali",
+        "Cukup hebat untuk menjawab",
+        "Robot hebat dalam menjawab pertanyaan",
+        "keren banget",
+        "naisu banget kamu",
+        "good job",
+        "Robot ini keren sekali dapat menjawab pertanyaan",
+        "Kau sangat hebat"
+      ],
+      "responses": [
+        "Tentu saja, itu pekerjaan saya",
+        "Tentu saja",
+        "Terimakasih"
+      ]
+    },
+
+    {
+      "tag": "SAVI.ngobrol",
+      "patterns": [
+        "Ayo berbicara denganku",
+        "Ayo mengobrol",
+        "Berbicara dengan saya",
+        "Ayo berbicara",
+        "Ngobrol yu",
+        "Mari berbicara",
+        "Ayo kita mengobrol",
+        "Waktunya untuk berbicara SAVI",
+        "Saatnya kita berbicara"
+      ],
+      "responses": [
+        "Tentu!, ayo berbicara",
+        "Tentu!, ayo kita mengobrol"
+      ]
+    },
+
+    {
+      "tag": "SAVI.sapa",
+      "patterns": [
+        "Halo SAVI!",
+        "Haiiii",
+        "Haloooo",
+        "Hello",
+        "Hai SAVI",
+        "yoo SAVI",
+        "Heyooo",
+        "Hallooo",
+        "Hei hei hei",
+        "Heiiiii",
+        "Woiiiii",
+        "PPPPPPPPPPPP",
+        "Peeeeeeeeeeeeee",
+        "P"
+      ],
+      "responses": [
+        "Halo, SAVI disini, Ada yang bisa saya bantu?",
+        "Hai, SAVI disini",
+        "Hai juga, Ada yang bisa SAVI bantu?",
+        "Iya? Ada yang bisa saya bantu?"
+      ]
+    },
+
+    {
+      "tag": "SAVI.siang",
+      "patterns": [
+        "Selamat Siang SAVI",
+        "Siang",
+        "Selamat siang",
+        "Siang SAVI",
+        "Halo siang SAVI"
+      ],
+      "responses": [
+        "Selamat siang juga, Ada yang bisa saya bantu?",
+        "Siang, Ada yang bisa saya bantu?"
+      ]
+    },
+
+    {
+      "tag": "SAVI.pagi",
+      "patterns": [
+        "Selamat pagi SAVI",
+        "pagi",
+        "Selamat pagi",
+        "pagi SAVI",
+        "Halo pagi SAVI"
+      ],
+      "responses": [
+        "Selamat pagi juga, Ada yang bisa saya bantu?",
+        "pagi, Ada yang bisa saya bantu?"
+      ]
+    },
+
+    {
+      "tag": "SAVI.sore",
+      "patterns": [
+        "Selamat sore SAVI",
+        "sore",
+        "Selamat sore",
+        "sore SAVI",
+        "Halo sore SAVI"
+      ],
+      "responses": [
+        "Selamat sore, Ada yang bisa saya bantu?",
+        "sore, Ada yang bisa saya bantu?"
+      ]
+    },
+
+    {
+      "tag": "SAVI.malam",
+      "patterns": [
+        "Selamat malam SAVI",
+        "malam",
+        "Selamat malam",
+        "malam SAVI",
+        "Halo malam SAVI"
+      ],
+      "responses": [
+        "Selamat malam, Ada yang bisa saya bantu?",
+        "malam, Ada yang bisa saya bantu?"
+      ]
+    },
+
+    {
+      "tag": "SAVI.baik",
+      "patterns": [
+        "kabarku baik, Tidak masalah",
+        "Aku baik",
+        "Baik baik",
+        "Tidak ada masalah",
+        "Sangat baik"
+      ],
+      "responses": [
+        "Senang mendengarnya",
+        "Baguslah kalau anda sedang baik-baik saja"
+      ]
+    },
+
+    {
+      "tag": "SAVI.lokasi",
+      "patterns": [
+        "Kamu berada dimana?",
+        "Robot kamu dimana?",
+        "Dimanakah kamu?",
+        "Berikan lokasi kamu",
+        "Tunjukkan Lokasi mu",
+        "Sedang dimana?",
+        "Lagi dimanakah kamu robot?",
+        "Aku ingin tahu kamu sedang berada dimana",
+        "Lokasinya dong",
+        "Aku butuh lokasi dari kamu",
+        "Kamu lagi dimana",
+        "Kau ini dimana"
+
+      ],
+      "responses": [
+        "Saya berada di lokasi ini",
+        "Saya ada disini",
+        "Sekarang saya disini",
+        "Saya disini"
+      ]
+    },
+
+    {
+      "tag": "SAVI.suhu",
+      "patterns": [
+        "Berapa suhu kotak driver kamu",
+        "Suhu kotak driver kamu",
+        "Beritahu suhu",
+        "Suhu saat ini pada kotak driver",
+        "Aku butuh suhu kotak driver saat ini",
+        "Suhu sekarang",
+        "Sekarang suhunya berapa",
+        "Suhu untuk sekarang",
+        "Suhu"
+      ],
+      "responses": [
+        "Suhu tempat saya berada adalah",
+        "Suhu sekarang adalah",
+        "Suhu disini adalah",
+        "Sekarang ruangan memiliki suhu sebesar"
+      ]
+    },
+
+    {
+      "tag": "SAVI.hump",
+      "patterns": [
+        "Berapa Kelembapan ruangan ini",
+        "Kelembapan ruangan ini",
+        "Beritahu Kelembapan pada ruangan ini",
+        "Kelembapan saat ini",
+        "Aku butuh kelembapan saat ini",
+        "kelembapan sekarang",
+        "Sekarang kelembapannya berapa",
+        "kelembapan untuk sekarang",
+        "kelembapan"
+      ],
+      "responses": [
+        "Kelembapan tempat saya berada adalah",
+        "Kelembapan disini adalah",
+        "Saat ini kelembapan adalah",
+        "Kelembapan saat ini adalah"
+      ]
+    },
+
+    {
+      "tag": "SAVI.terimakasih",
+      "patterns": [
+        "Makasih",
+        "Terima Kasih",
+        "Makasih SAVI",
+        "Thanks",
+        "Thank you",
+        "Tengkyu",
+        "Terima kasih banyak atas bantuanmu",
+        "Nuhun pisan nya",
+        "matur suwun",
+        "makasih atas jawabanmu",
+        "Terimakasih telah membantu"
+      ],
+      "responses": [
+        "Sama sama, senang bisa membantu",
+        "Sama sama",
+        "Tidak masalah"
+      ]
+    },
+
+    {
+      "tag": "SAVI.berpisah",
+      "patterns": [
+        "Selamat tinggal",
+        "Dadah",
+        "Dah",
+        "Sampai jumpa lagi",
+        "Pergi dulu ya",
+        "Cabut dulu",
+        "Byee",
+        "See you",
+        "Ku pergi dulu",
+        "Duluan yah",
+        "Byeeeeeeeee"
+      ],
+      "responses": [
+        "Baik, hati-hati ya",
+        "Sampai jumpa lagi",
+        "Dadah"
+      ]
+    },
+
+    {
+      "tag": "SAVI.jam",
+      "patterns": [
+        "Jam berapa sekarang",
+        "Beritahu aku waktu sekarang",
+        "Pukul berapa sekarang",
+        "Waktu saat ini",
+        "Jam saat ini",
+        "Saat ini jam berapa"
+      ],
+      "responses": [
+        "Pukul",
+        "Saat ini waktu menunjukkan pukul",
+        "Jam",
+        "Saat ini jam",
+        "Saat ini pukul"
+      ]
+    },
+
+    {
+      "tag": "SAVI.hari",
+      "patterns": [
+        "hari apa sekarang",
+        "hari ini hari apa",
+        "hari apa",
+        "sekarang hari apa",
+        "hari ini",
+        "beritahu hari apa ini",
+        "hari apakah ini"
+      ],
+      "responses": [
+        "Hari",
+        "Sekarang hari",
+        "Hari ini adalah hari",
+        "Saat ini hari"
+      ]
+    },
+
+    {
+      "tag": "SAVI.tanggal",
+      "patterns": [
+        "Tanggal berapa sekarang",
+        "Sekarang tanggal berapa",
+        "Beritahu tanggal berapa sekarang",
+        "Tanggal berapa",
+        "Tanggal saat ini",
+        "Saya mau tanggal hari ini",
+        "Tanggal berapakah ini"
+      ],
+      "responses": [
+        "Sekarang tanggal",
+        "Tanggal",
+        "Saat ini tanggal",
+        "Tanggal saat ini adalah"
+      ]
+    },
+
+    {
+      "tag": "SAVI.beban",
+      "patterns": [
+        "Berapa [beban|berat] yang dapat dibawa robot",
+        "Robot ini dapat membawa [beban|berat] hingga berapa ",
+        "Dapat membawa [beban|berat] berapa",
+        "maksimal [beban|berat] yang dapat dibawa",
+        "Kuat hingga membawa seberapa [beban|berat]",
+        "Jumlah [beban|berat] yang dapat dibawa",
+        "Kamu dapat membawa seberapa banyak [beban|berat]"
+      ],
+      "responses": [
+        "Saya dapat membawa beban hingga kurang lebih 20 Kilogram",
+        "Kurang lebih 20 kilogram",
+        "Beban yang dapat dibawa oleh saya kurang lebih 20 kilogram"
+      ]
+    },
+
+    {
+      "tag": "SAVI.slow",
+      "patterns": [
+        "Ubah kecepatan menjadi lambat",
+        "Lambatkan kecepatanmu",
+        "Menjadi lambatlah",
+        "Lambat saja",
+        "Kecepatan lambat",
+        "Berubah menjadi lambat",
+        "Turunkan kecepatan menjadi lambat"
+      ],
+      "responses": [
+        "Baik, saya akan melambat",
+        "Kecepatan menjadi lambat",
+        "Baik, laksanakan. Kecepatan menjadi lambat",
+        "Kecepatan diturunkan menjadi lambat",
+        "Kecepatan turun menjadi lambat"
+      ]
+    },
+
+    {
+      "tag": "SAVI.medium",
+      "patterns": [
+        "Ubah kecepatan menjadi [sedang|medium]",
+        "[sedang|medium]kan kecepatanmu",
+        "Menjadi [sedang|medium]lah",
+        "[sedang|medium] saja",
+        "Kecepatan [sedang|medium]",
+        "Berubah menjadi [sedang|medium]",
+        "Ubah kecepatan menjadi medium"
+      ],
+      "responses": [
+        "Baik, kecepatan saya akan menjadi medium",
+        "Kecepatan menjadi medium",
+        "Baik, laksanakan. Kecepatan menjadi medium",
+        "Kecepatan diturunkan menjadi medium",
+        "Kecepatan turun menjadi medium"
+        
+      ]
+    },
+
+    {
+      "tag": "SAVI.fast",
+      "patterns": [
+        "Ubah kecepatan menjadi cepat",
+        "cepatkan kecepatanmu",
+        "Menjadi cepatlah",
+        "cepat saja",
+        "Kecepatan cepat",
+        "Berubah menjadi cepat",
+        "Naikkan kecepatan menjadi cepat"
+      ],
+      "responses": [
+        "Baik, kecepatan saya akan menjadi cepat",
+        "Kecepatan menjadi cepat",
+        "Baik, laksanakan. Kecepatan menjadi cepat",
+        "Kecepatan diturunkan menjadi cepat",
+        "Kecepatan dinaikkan menjadi cepat"
+      ]
+    },
+
+    {
+      "tag": "SAVI.kondisikecepatan",
+      "patterns": [
+        "Beritahukan aku kecepatanmu sekarang",
+        "Kondisi kecepatan kamu",
+        "Apa kondisi kecepatan robot",
+        "Pada mode apa kecepatan kamu sekarang",
+        "mode kecepatan kamu apa",
+        "Kecepatan apa sekarang"
+      ],
+      "responses": [
+        "Saya ada dalam kecepatan",
+        "Saya dalam mode kecepatan",
+        "Saya sedang berkecepatan",
+        "Baik, kecepatan saya adalah"
+      ]
+    },
+
+    {
+      "tag": "SAVI.Baterai",
+      "patterns": [
+        "Tunjukan dayamu",
+        "Baterai berapa persen lagi",
+        "Beritahu dayamu",
+        "Beritahu nilai baterai mu",
+        "Berapa lagi baterai yang kamu miliki",
+        "Jumlah kapasitas bateraimu",
+        "Berapa persen lagi baterai yang kamu punya"
+      ],
+      "responses": [
+        "Baterai Ada di",
+        "Saya memiliki baterai tersisa",
+        "Kapasitas baterai ada pada",
+        "Baterai tersisa ",
+        "Baterai saat ini tersisa"
+      ]
+    },
+
+    {
+      "tag": "SAVI.maju",
+      "patterns": [
+        "Bergerak maju",
+        "maju jalan",
+        "maju",
+        "Maju ke depan",
+        "Majulah kedepan",
+        "Majuuuuuuuuuuuuuuuu",
+        "Maju maju maju maju",
+        "Majulah kedepan",
+        "Majulah"
+      ],
+      "responses": [
+        "Bergerak maju",
+        "Saya akan maju",
+        "Robot maju",
+        "Maju kedepan",
+        "Bergerak ke arah depan",
+        "Robot bergerak maju"
+      ]
+    },
+
+    {
+      "tag": "SAVI.mundur",
+      "patterns": [
+        "Bergerak mundur",
+        "mundur jalan",
+        "mundur",
+        "mundur ke belakang",
+        "munduruuuuuuuuuuuuuuu",
+        "mundur mundur mundur mundur",
+        "mundurlah kebelakang",
+        "mundurlah",
+        "Robot, mundur"
+      ],
+      "responses": [
+        "Bergerak mundur",
+        "Saya akan mundur",
+        "Robot mundur",
+        "mundur kebelakang",
+        "Bergerak ke arah belakang",
+        "Robot bergerak mundur"
+      ]
+    },
+
+    {
+      "tag": "SAVI.stop",
+      "patterns": [
+        "Berhenti",
+        "Berhenti Bergerak",
+        "Stop",
+        "Cukup sampai disini",
+        "Berhenti untuk saat ini",
+        "Robot berhenti",
+        "SAVI berhenti",
+        "Diam",
+        "Cukup diam",
+        "Jangan bergerak"
+      ],
+      "responses": [
+        "Stop",
+        "Saya berhenti",
+        "Saya akan berhenti",
+        "Baik, Saya berhenti",
+        "Baiklah",
+        "Baik"
+      ]
+    },
+
+    {
+      "tag": "SAVI.kanan",
+      "patterns": [
+        "Belok ke kanan",
+        "Berbelok lah ke kanan",
+        "Belok kanan",
+        "Hadap kanan",
+        "Belok menuju arah kanan",
+        "Belok ke arah kanan",
+        "Kanan kanan kanan",
+        "Ke kanan",
+        "Lihat ke kanan",
+        "Menatap ke kanan"
+      ],
+      "responses": [
+        "Belok kanan",
+        "Saya ke kanan",
+        "Baik",
+        "Ke kanan",
+        "Baiklah",
+        "Okay"
+      ]
+    },
+
+    {
+      "tag": "SAVI.kiri",
+      "patterns": [
+        "Belok ke kiri",
+        "Berbelok lah ke kiri",
+        "Belok kiri",
+        "Hadap kiri",
+        "Belok menuju arah kiri",
+        "Belok ke arah kiri",
+        "kiri kiri kiri",
+        "Ke kiri",
+        "Lihat ke kiri",
+        "Menatap ke kiri",
+        "kiri kiri"
+      ],
+      "responses": [
+        "Belok kiri",
+        "Saya ke kiri",
+        "Baik",
+        "Ke kiri",
+        "Baiklah",
+        "Okay"
+      ]
+    },
+
+    {
+      "tag": "SAVI.photo",
+      "patterns": [
+        "Apa yang ada didepanmu?",
+        "Ambil foto didepanmu",
+        "Screenshot tolong dong",
+        "Ambil gambar yang ada didepan robot",
+        "Berikan aku gambaran yang ada didepanmu",
+        "Fotokan yang ada didepanmu",
+        "Aku ingin tahu ada apa didepanmu",
+        "Pandangan yang ada didepanmu",
+        "Fotokan depan robot"
+      ],
+      "responses": [
+        "Ini adalah gambar didepan saya",
+        "Baik, ini adalah gambar didepan saya",
+        "Okay, gambar diambil",
+        "Cekrek, gambar diambil",
+        "Ini pandangan didepan saya"
+      ]
+    },
+
+    {
+      "tag": "SAVI.antarbarang",
+      "patterns": [
+        "Antarkan barang ini menuju lokasi ini",
+        "Antarkan barang menuju",
+        "Berikan barang ini ke tempat",
+        "Kirimkan barang ini",
+        "Apakah kamu dapat mengirimkan barang ini menuju lokasi ini?",
+        "Tolong kirimkan ini barang ke",
+        "Aku ingin kau mengirimkan barang ini menuju"
+      ],
+      "responses": [
+        "Mohon maaf sebesar-besarnya, saya tidak bisa, fitur itu masih dalam pengembangan oleh kami, mungkin lain kali",
+        "Mohon maaf tidak bisa, fitur tersebut masih dalam pengembangan, mungkin lain kali",
+        "Tidak bisa, kami masih belum mengembangkan fitur tersebut, mungkin lain kali",
+        "Maaf, kamu masih belum mengembangkan fitur itu, mungkin lain kali"
+      ]
+    },
+
+    {
+      "tag": "SAVI.datangkelokasi",
+      "patterns": [
+        "Datanglah ketempatku, apakah kau bisa?",
+        "Kesini dong",
+        "Datanglah kemari",
+        "Aku pengen kamu kesini",
+        "Datanglah kemari ke lokasinya",
+        "Datang ke tempatku",
+        "Datang ke lokasiku"
+      ],
+      "responses": [
+        "Mohon maaf sebesar-besarnya, saya tidak bisa, fitur itu masih dalam pengembangan oleh kami, mungkin lain kali",
+        "Mohon maaf tidak bisa, fitur tersebut masih dalam pengembangan, mungkin lain kali",
+        "Tidak bisa, kami masih belum mengembangkan fitur tersebut, mungkin lain kali",
+        "Maaf, kamu masih belum mengembangkan fitur itu, mungkin lain kali"
+      ]
+    },
+
+    {
+      "tag": "SAVI.berat",
+      "patterns": [
+        "Berapa berat barang bawaanmu itu?",
+        "Sedang membawa berapa berat?",
+        "Barang itu berapa beratnya?",
+        "Berapa berat barang yang sedang kamu bawa itu?",
+        "Berat yang sedang kau bawa",
+        "Berat barang semua adalah",
+        "Aku butuh info mengenai beban barang bawaanmu"
+      ],
+      "responses": [
+        "Mohon maaf sebesar-besarnya, saya tidak bisa, fitur itu masih dalam pengembangan oleh kami, mungkin lain kali",
+        "Mohon maaf tidak bisa, fitur tersebut masih dalam pengembangan, mungkin lain kali",
+        "Tidak bisa, kami masih belum mengembangkan fitur tersebut, mungkin lain kali",
+        "Maaf, kamu masih belum mengembangkan fitur itu, mungkin lain kali"
+      ]
+    },
+
+    {
+      "tag": "SAVI.respon_baterai",
+      "patterns": [
+      ],
+      "responses": [
+        "Baterai saya tersisa",
+        "Tolong lakukan pengisian baterai. Baterai saya tersisa ",
+        "Tolong saya, saya kehabisan baterai. Baterai tersisa",
+        "Baterai tersisa",
+        "Mohon untuk mengisi ulang baterai"
+      ]
+    },
+
+    {
+      "tag": "SAVI.respon_baterai",
+      "patterns": [
+      ],
+      "responses": [
+        "Ada objek terdeteksi, saya menghindar",
+        "Objek terdeteksi",
+        "Terdeteksi objek",
+        "Objek telah terdeteksi"
+      ]
+    },
+
+    {
+      "tag": "SAVI.respon_tujuan",
+      "patterns": [
+      ],
+      "responses": [
+        "Saya telah mencapai tujuan saya",
+        "Tujuan lokasi telah tercapai",
+        "Saya telah sampai pada tujuan saya",
+        "Navigasi telah selesai",
+        "Tujuan tercapai"
+      ]
+    },
+
+    {
+      "tag": "SAVI.respon_error",
+      "patterns": [
+      ],
+      "responses": [
+        "Ada kesalahan yang terjadi pada saya",
+        "Kesalahan terjadi",
+        "Kesalahan muncul",
+        "Terjadi masalah",
+        "Error Error Error Error Error Error"
+      ]
+    },
+
+    {
+      "tag": "SAVI.respon_panas",
+      "patterns": [
+      ],
+      "responses": [
+        "Peringatan: Suhu kotak driver panas, mohon lakukan pengecekan",
+        "Peringatan: Suhu driver panas",
+        "Peringatan: Suhu driver terlalu tinggi, mohon untuk melakukan sesuatu"
+      ]
+    }
+  ]
+}
